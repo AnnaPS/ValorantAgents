@@ -1,0 +1,6 @@
+package nova.dev.valorantAgents
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
