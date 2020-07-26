@@ -25,7 +25,7 @@ class AppTheme {
   static final TextStyle suHeading = TextStyle(
       fontFamily: 'Cabin',
       color: Colors.white,
-      fontSize: 32,
-      fontWeight: FontWeight.w600,
+      fontSize: 20,
+      fontWeight: FontWeight.w100,
       letterSpacing: 1.2);
 }

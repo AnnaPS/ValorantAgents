@@ -15,28 +15,31 @@ class _ValorantAgentsScreenState extends State<ValorantAgentScreen> {
         leading: Icon(Icons.arrow_back_ios),
         actions: <Widget>[
           Padding(
-            padding: EdgeInsets.only(right: 16),
+            padding: EdgeInsets.only(bottom: 16),
             child: Icon(Icons.search),
           )
         ],
       ),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0, left: 32.0),
-              child: RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                        text: "Agentes Valorant", style: AppTheme.display1),
-                  ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0, left: 32.0),
+                child: RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                          text: "Agentes Valorant", style: AppTheme.display1),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Expanded(child: CharacterWidget())
-          ],
+              Expanded(child: CharacterWidget())
+            ],
+          ),
         ),
       ),
     );
