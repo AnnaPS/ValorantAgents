@@ -23,7 +23,7 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
           children: <Widget>[
             Hero(
               tag: "background - ${widget.character.name}",
-              child: DecoratedBox(
+              child: Container(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                         colors: widget.character.colors,
@@ -52,7 +52,7 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                     ),
                   ),
                   Align(
-                    alignment: Alignment.topCenter,
+                    alignment: Alignment.topRight,
                     child: Hero(
                       tag: "image - ${widget.character.name}",
                       child: Image.asset(
@@ -64,9 +64,17 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 32.0, vertical: 8.0),
-                    child: Text(
-                      widget.character.name,
-                      style: AppTheme.heading,
+                    child: Hero(
+                      tag: "name - ${widget.character.name}",
+                      child: Material(
+                        color: Colors.transparent,
+                        child: Container(
+                          child: Text(
+                            widget.character.name,
+                            style: AppTheme.heading,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                   Padding(

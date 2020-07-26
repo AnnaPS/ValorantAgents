@@ -21,10 +21,10 @@ class CharacterWidget extends StatelessWidget {
         children: <Widget>[
           Align(
             alignment: Alignment.bottomCenter,
-            child: ClipPath(
-              clipper: CharacterCardBackgroundClipper(),
-              child: Hero(
-                tag: "background - ${characteres[0].name}",
+            child: Hero(
+              tag: "background - ${characteres[0].name}",
+              child: ClipPath(
+                clipper: CharacterCardBackgroundClipper(),
                 child: Container(
                   height: 0.55 * screenHeight,
                   width: 0.9 * screenWidth,
@@ -57,9 +57,17 @@ class CharacterWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Text(
-                  characteres[0].name,
-                  style: AppTheme.heading,
+                Hero(
+                  tag: "name - ${characteres[0].name}",
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Container(
+                      child: Text(
+                        characteres[0].name,
+                        style: AppTheme.heading,
+                      ),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: 8,
