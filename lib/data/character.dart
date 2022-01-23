@@ -6,10 +6,15 @@ class Character {
   final String description;
   final List<Color> colors;
 
-  Character({this.name, this.imagePath, this.description, this.colors});
+  Character({
+    required this.name,
+    required this.imagePath,
+    required this.description,
+    required this.colors,
+  });
 }
 
-List characteres = [
+final List characteres = [
   Character(
       name: "Jett",
       imagePath: "images/Jett.png",

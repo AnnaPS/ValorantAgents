@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static const TextStyle display1 = TextStyle(
       fontFamily: 'Cabin',
-      color: Colors.black,
+      color: Colors.white,
       fontSize: 38,
       fontWeight: FontWeight.w600,
       letterSpacing: 1.2);
 
   static const TextStyle display2 = TextStyle(
       fontFamily: 'Cabin',
-      color: Colors.black,
+      color: Colors.white,
       fontSize: 28,
       fontWeight: FontWeight.normal,
       letterSpacing: 1.1);
